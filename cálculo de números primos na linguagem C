@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main(){
+	setlocale(LC_ALL,"");
+	int z,i=1,aux=0;
+	
+	printf("escolha um valor para saber se ele é primo ou não.\nDigite o valor:");
+	scanf("%d",&z);
+	for(z%i;i<=z;i++){
+		if(z%i==0){
+			aux++;
+		}
+		printf("\n%d : %d = %d e tem resto = %d",z,i,z/i,z%i);
+
+	}
+	if(aux==2){
+		printf("\n%d é primo.\n",z);
+	}else{
+		printf("\n%d não é primo, pois tem %d divisores.\n",z,aux);
+}
+	return 0;
+
+}
